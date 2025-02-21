@@ -8,6 +8,7 @@ const app = express()
 app.engine('handlebars', handlebars.create({partialsDir:["views/partials"]}).engine)
 app.set('view engine', 'handlebars')
 
+app.use (express.static('public'))
 
 const products = [
 {
